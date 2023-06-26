@@ -8,12 +8,12 @@ n=3
 numbers=("1" "2" "3")
 
 # 입력할 숫자 개수 전달
-docker exec -it $container_id python -c "print($n)"
+docker exec -i $container_id python -c "print($n)"
 
 # 숫자 값들을 차례로 전달
 for number in "${numbers[@]}"
 do
-    docker exec -it $container_id python -c "print($number)"
+    docker exec -i $container_id python -c "print($number)"
 done
 
 # 실행 결과 확인
